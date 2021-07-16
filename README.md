@@ -36,37 +36,37 @@ We would like to implement a Band Elimination Inverse Chebyshev filter with the 
 In the below graph we can see the Transfer function of the filter. It satisfies all the above requirements. 
 
 <p allign = "center">
-     <img src="/HP_Butterworth/photos/HP_1.png"width = "70%">
+     <img src="/HP_Butterworth/photos/HP_1.png"width = "80%">
 </p>
 
 Proceeding with the circuit, after using the script to calculate all the required components, below we can see the final schematic.
 
 <p allign = "center">
-     <img src="/HP_Butterworth/photos/HP_2.png"width = "70%">
+     <img src="/HP_Butterworth/photos/HP_2.png"width = "80%">
 </p>
 
 Connecting a Bode-Plotter, we take exactly the same above Transfer function graph in Multisim. We are confident that the filter works properly.
 
 <p allign = "center">
-     <img src="/HP_Butterworth/photos/HP_3.png"width = "70%">
+     <img src="/HP_Butterworth/photos/HP_3.png"width = "80%">
 </p>
 
 We are going to test the filter, giving as an input a sum of different cosines using different AC voltage sources in series and an Oscilloscope. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 
 
 <p allign = "center">
-     <img src="/HP_Butterworth/photos/HP_4.png"width = "70%">
+     <img src="/HP_Butterworth/photos/HP_4.png"width = "80%">
 </p>
 
 Proceeding with the Fourier Analysis, below we can see the spectrum of the input signal:
 
 <p allign = "center">
-     <img src="/HP_Butterworth/photos/HP_5.png"width = "70%">
+     <img src="/HP_Butterworth/photos/HP_5.png"width = "80%">
 </p>
 
 Spectrum of the output signal:
 
 <p allign = "center">
-     <img src="/HP_Butterworth/photos/HP_6.png"width = "70%">
+     <img src="/HP_Butterworth/photos/HP_6.png"width = "80%">
 </p>
 
 We observe that low frequencies (below fs = 1.9231 kHz) are "cut" in the output. At the input we have 5 spikes while the output lacks the frequencies for 384.6 Hz and for 1346 Hz that are indeed below fs, which makes perfect sense since our circuit is an High pass filter. At the same time, the correctness of the gain regulation is observed. The magnitude of the spikes at the output is greater (by approximately 3.1 times) than the spikes at the input, since we have a gain of 10dB. We conclude that the filter works properly, as all its requirements are met.

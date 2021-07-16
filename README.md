@@ -48,7 +48,7 @@ Proceeding with the circuit, after using the script to calculate all the require
 Connecting a Bode-Plotter, we take exactly the same above Transfer function graph in Multisim. We are confident that the filter works properly.
 
 <p allign = "center">
-     <img src="/HP_Butterworth/photos/HP_3.png"width = "80%">
+     <img src="/HP_Butterworth/photos/HP_3.png"width = "95%">
 </p>
 
 We are going to test the filter, giving as an input a sum of different cosines using different AC voltage sources in series and an Oscilloscope. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 
@@ -100,7 +100,7 @@ Proceeding with the circuit, after using the script to calculate all the require
 Connecting a Bode-Plotter, we take exactly the same above Transfer function graph in Multisim. We are confident that the filter works properly.
 
 <p allign = "center">
-     <img src="/LP_Chebyshev/photos/LP_3.png"width = "80%">
+     <img src="/LP_Chebyshev/photos/LP_3.png"width = "95%">
 </p>
 
 We are going to test the filter, giving as an input a rectangular pulse. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 
@@ -157,7 +157,7 @@ Proceeding with the circuit, after using the script to calculate all the require
 Connecting a Bode-Plotter, we take exactly the same above Transfer function graph in Multisim. We are confident that the filter works properly.
 
 <p allign = "center">
-     <img src="/BE_Inverse_Chebyshev/photos/BE_6.png"width = "80%">
+     <img src="/BE_Inverse_Chebyshev/photos/BE_6.png"width = "95%">
 </p>
 
 We are going to test the filter, giving as an input a sum of different cosines using different AC voltage sources in series and an Oscilloscope. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 
@@ -214,7 +214,7 @@ Proceeding with the circuit, after using the script to calculate all the require
 Connecting a Bode-Plotter, we take exactly the same above Transfer function graph in Multisim. We are confident that the filter works properly.
 
 <p allign = "center">
-     <img src="/BP_Chebyshev/photos/BP_3.png"width = "80%">
+     <img src="/BP_Chebyshev/photos/BP_3.png"width = "95%">
 </p>
 
 We are going to test the filter, giving as an input a sum of different cosines using different AC voltage sources in series and an Oscilloscope. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 

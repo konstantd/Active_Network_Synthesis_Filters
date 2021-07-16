@@ -88,37 +88,37 @@ We would like to implement a Band Elimination Inverse Chebyshev filter with the 
 In the below graph we can see the Transfer function of the filter. It satisfies all the above requirements. 
 
 <p allign = "center">
-     <img src="/LP_Chebyshev/photos/LP_1.png"width = "70%">
+     <img src="/LP_Chebyshev/photos/LP_1.png"width = "80%">
 </p>
 
 Proceeding with the circuit, after using the script to calculate all the required components, below we can see the final schematic.
 
 <p allign = "center">
-     <img src="/LP_Chebyshev/photos/LP_2.png"width = "70%">
+     <img src="/LP_Chebyshev/photos/LP_2.png"width = "80%">
 </p>
 
 Connecting a Bode-Plotter, we take exactly the same above Transfer function graph in Multisim. We are confident that the filter works properly.
 
 <p allign = "center">
-     <img src="/LP_Chebyshev/photos/LP_3.png"width = "70%">
+     <img src="/LP_Chebyshev/photos/LP_3.png"width = "80%">
 </p>
 
 We are going to test the filter, giving as an input a rectangular pulse. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 
 
 <p allign = "center">
-     <img src="/LP_Chebyshev/photos/LP_4.png"width = "70%">
+     <img src="/LP_Chebyshev/photos/LP_4.png"width = "80%">
 </p>
 
 Proceeding with the Fourier Analysis, below we can see the spectrum of the input signal:
 
 <p allign = "center">
-     <img src="/LP_Chebyshev/photos/LP_5.png"width = "70%">
+     <img src="/LP_Chebyshev/photos/LP_5.png"width = "80%">
 </p>
 
 Spectrum of the output signal:
 
 <p allign = "center">
-     <img src="/LP_Chebyshev/photos/LP_6.png"width = "70%">
+     <img src="/LP_Chebyshev/photos/LP_6.png"width = "80%">
 </p>
 
 We observe that high frequencies above fs, ie above 10.32 kHz are "cut" in the output, and hence these frequencies that create the rectangular pulse at the input signal have zero magnitude in the output range, which makes sense since our circuit is a low-pass filter. At the same time, the correctness of the gain regulation is observed. The magnitude of the spikes at the output for low frequencies is almost the same as the input since we have a 0 dB gain. So it is concluded that the filter works properly as all requirements are satisfied.
@@ -145,37 +145,37 @@ We would like to implement a Band Elimination Inverse Chebyshev filter with the 
 In the below graph we can see the Transfer function of the filter. It satisfies all the above requirements. 
 
 <p allign = "center">
-     <img src="/BE_Inverse_Chebyshev/photos/BE_1.png"width = "70%">
+     <img src="/BE_Inverse_Chebyshev/photos/BE_1.png"width = "80%">
 </p>
 
 Proceeding with the circuit, after using the script to calculate all the required components, below we can see the final schematic.
 
 <p allign = "center">
-     <img src="/BE_Inverse_Chebyshev/photos/BE_1.png"width = "70%">
+     <img src="/BE_Inverse_Chebyshev/photos/BE_1.png"width = "80%">
 </p>
 
 Connecting a Bode-Plotter, we take exactly the same above Transfer function graph in Multisim. We are confident that the filter works properly.
 
 <p allign = "center">
-     <img src="/BE_Inverse_Chebyshev/photos/BE_6.png"width = "70%">
+     <img src="/BE_Inverse_Chebyshev/photos/BE_6.png"width = "80%">
 </p>
 
 We are going to test the filter, giving as an input a sum of different cosines using different AC voltage sources in series and an Oscilloscope. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 
 
 <p allign = "center">
-     <img src="/BE_Inverse_Chebyshev/photos/BE_3.png"width = "70%">
+     <img src="/BE_Inverse_Chebyshev/photos/BE_3.png"width = "80%">
 </p>
 
 Proceeding with the Fourier Analysis, below we can see the spectrum of the input signal:
 
 <p allign = "center">
-     <img src="/BE_Inverse_Chebyshev/photos/BE_4.png"width = "70%">
+     <img src="/BE_Inverse_Chebyshev/photos/BE_4.png"width = "80%">
 </p>
 
 Spectrum of the output signal:
 
 <p allign = "center">
-     <img src="/BE_Inverse_Chebyshev/photos/BE_5.png"width = "70%">
+     <img src="/BE_Inverse_Chebyshev/photos/BE_5.png"width = "80%">
 </p>
 
 
@@ -202,37 +202,37 @@ We would like to implement a Band Elimination Inverse Chebyshev filter with the 
 In the below graph we can see the Transfer function of the filter. It satisfies all the above requirements. 
 
 <p allign = "center">
-     <img src="/BP_Chebyshev/photos/BP_1.png"width = "70%">
+     <img src="/BP_Chebyshev/photos/BP_1.png"width = "80%">
 </p>
 
 Proceeding with the circuit, after using the script to calculate all the required components, below we can see the final schematic.
 
 <p allign = "center">
-     <img src="/BP_Chebyshev/photos/BP_2.png"width = "70%">
+     <img src="/BP_Chebyshev/photos/BP_2.png"width = "80%">
 </p>
 
 Connecting a Bode-Plotter, we take exactly the same above Transfer function graph in Multisim. We are confident that the filter works properly.
 
 <p allign = "center">
-     <img src="/BP_Chebyshev/photos/BP_3.png"width = "70%">
+     <img src="/BP_Chebyshev/photos/BP_3.png"width = "80%">
 </p>
 
 We are going to test the filter, giving as an input a sum of different cosines using different AC voltage sources in series and an Oscilloscope. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 
 
 <p allign = "center">
-     <img src="/BP_Chebyshev/photos/BP_4.png"width = "70%">
+     <img src="/BP_Chebyshev/photos/BP_4.png"width = "80%">
 </p>
 
 Proceeding with the Fourier Analysis, below we can see the spectrum of the input signal:
 
 <p allign = "center">
-     <img src="/BP_Chebyshev/photos/BP_5.png"width = "70%">
+     <img src="/BP_Chebyshev/photos/BP_5.png"width = "80%">
 </p>
 
 Spectrum of the output signal:
 
 <p allign = "center">
-     <img src="/BP_Chebyshev/photos/BP_6.png"width = "70%">
+     <img src="/BP_Chebyshev/photos/BP_6.png"width = "80%">
 </p>
 
 Initially, we noticet frequencies 𝑓2 = 1483.33 𝐻𝑧, 𝑓3 = 317.54 𝐻𝑧, 𝑓4 = 2.55 𝑘𝐻𝑧, 𝑓5 = 3.06 𝑘𝐻𝑧, which are in the cut-off zone are "cut", ie they are eliminated in the output . At the output we have only one spike at the frequency of 𝑓1 = 875 𝐻𝑧 which is actually between 850 and 952.94 Hz, which it absolutely logical since our circuit is a bandpass filter. Also, the correctness of the gain regulation is also observed. The magnitude of the spikes remaining at the output is approximately equal to its amplitude at the input, since we have a gain of 0dB. This concludes that the filter works correctly, as all requirements are met.

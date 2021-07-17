@@ -13,17 +13,17 @@ This repository contains the implementation of four different filters:
 
 
 
-Originally, the analytical solutions for each filter was implemented in MATLAB. Also, MATLAB was used for the calculation of the parameters of the electronic components. After that, the schematic was designed in MULTISIM and the application was compared with the analytical solution in order to assure that the respective filter works properly. The scripts, multisim files as well as the pdf files with detailed description of the whole steps that were folllowed can be found in the respective folders for each filter. 
+Originally, the analytical solutions for each filter was implemented in MATLAB. Also, MATLAB was used for the calculation of the parameters of the electronic components. After that, the schematic was designed in MULTISIM and the application was compared with the analytical solution in order to assure that the respective filter works properly. The scripts, multisim files as well as the pdf files with detailed description of the whole steps that were folllowed can be found in the respective folders for each filters. 
 
-Below, we are going to present the requirements, the final Transfer Function with all Units that were used, the schematic , a Transient Analysis as well as a Fourier Analysis in Multisim of the input and output signal, in order to prove the efficiency of the designed filter.
-
-
-
-### High-Pass Butterworth
+Below, we are going to present briefly the requirements, the final Transfer Function with all Units that were used, the schematic, a Transient Analysis as well as a Fourier Analysis in Multisim of the input and output signal, in order to prove the efficiency of the designed filter. Note that the pdf files provide much more detail, in case needed. 
 
 
 
-We would like to implement a Band Elimination Inverse Chebyshev filter with the below requirements of frequencies and attenuation levels:
+## High-Pass Butterworth
+
+
+
+We would like to implement a High-Pass Butterworth filter with the below requirements of frequencies and attenuation levels:
 
 - fp = 5 kHz 
 - fs = 1.92 kHz 
@@ -33,16 +33,16 @@ We would like to implement a Band Elimination Inverse Chebyshev filter with the 
 
 
 
-In the below graph we can see the Transfer function of the filter. It satisfies all the above requirements. 
+In the below graph we can see the **Transfer function** of the filter. It satisfies all the above requirements. 
 
 <p allign = "center">
      <img src="/HP_Butterworth/photos/HP_1.png"width = "80%">
 </p>
 
-Proceeding with the circuit, after using the script to calculate all the required components, below we can see the final schematic.
+After using the Matlab script to calculate all the required **components**, we proceed with the design of the circuit. Below we can see the final **schematic**.
 
 <p allign = "center">
-     <img src="/HP_Butterworth/photos/HP_2.png"width = "80%">
+     <img src="/HP_Butterworth/photos/HP_2.png"width = "95%">
 </p>
 
 Connecting a Bode-Plotter, we take exactly the same above Transfer function graph in Multisim. We are confident that the filter works properly.
@@ -51,13 +51,13 @@ Connecting a Bode-Plotter, we take exactly the same above Transfer function grap
      <img src="/HP_Butterworth/photos/HP_3.png"width = "95%">
 </p>
 
-We are going to test the filter, giving as an input a sum of different cosines using different AC voltage sources in series and an Oscilloscope. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 
+We are going to **test** the filter, giving as an **input a sum of different cosines** using different AC voltage sources in series and an Oscilloscope. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 
 
 <p allign = "center">
      <img src="/HP_Butterworth/photos/HP_4.png"width = "80%">
 </p>
 
-Proceeding with the Fourier Analysis, below we can see the spectrum of the input signal:
+It is clear that the signal has been filtered and some frequencies has been cut off. We will proceed with the Fourier Analysis, in order to examine it. Below we can see the spectrum of the input signal:
 
 <p allign = "center">
      <img src="/HP_Butterworth/photos/HP_5.png"width = "80%">
@@ -69,29 +69,29 @@ Spectrum of the output signal:
      <img src="/HP_Butterworth/photos/HP_6.png"width = "80%">
 </p>
 
-We observe that low frequencies (below fs = 1.9231 kHz) are "cut" in the output. At the input we have 5 spikes while the output lacks the frequencies for 384.6 Hz and for 1346 Hz that are indeed below fs, which makes perfect sense since our circuit is an High pass filter. At the same time, the correctness of the gain regulation is observed. The magnitude of the spikes at the output is greater (by approximately 3.1 times) than the spikes at the input, since we have a gain of 10dB. We conclude that the filter works properly, as all its requirements are met.
+We observe that low frequencies (below fs = 1.9231 kHz) are "cut" in the output. At the input we have 5 spikes while the output lacks the frequencies for 384.6 Hz and for 1346 Hz that are indeed below fs, which makes perfect sense since our circuit is a High Pass filter. At the same time, the correctness of the gain regulation is observed. The magnitude of the spikes at the output is greater (by approximately 3.1 times) than the spikes at the input, since we have a gain of 10dB. We conclude that the filter works properly, as all its requirements are met.
 
 
 
-### Low-Pass Chebyshev 
+## Low-Pass Chebyshev 
 
 
 
-We would like to implement a Band Elimination Inverse Chebyshev filter with the below requirements of frequencies and attenuation levels:
+We would like to implement a Low-Pass Chebyshev filter with the below requirements of frequencies and attenuation levels:
 
 - fp = 6 kHz
--  fs = 10.320 kHz 
+- fs = 10.320 kHz 
 - amax = 0.25 dB 
 - amin = 26.25 dB 
 - 0 dB
 
-In the below graph we can see the Transfer function of the filter. It satisfies all the above requirements. 
+In the below graph we can see the **Transfer function** of the filter. It satisfies all the above requirements. 
 
 <p allign = "center">
      <img src="/LP_Chebyshev/photos/LP_1.png"width = "80%">
 </p>
 
-Proceeding with the circuit, after using the script to calculate all the required components, below we can see the final schematic.
+Proceeding with the circuit, after using the script to calculate all the required **components**, below we can see the final ***schematic**.
 
 <p allign = "center">
      <img src="/LP_Chebyshev/photos/LP_2.png"width = "80%">
@@ -103,7 +103,7 @@ Connecting a Bode-Plotter, we take exactly the same above Transfer function grap
      <img src="/LP_Chebyshev/photos/LP_3.png"width = "95%">
 </p>
 
-We are going to test the filter, giving as an input a rectangular pulse. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 
+We are going to **test** the filter, giving as an input a **rectangular pulse**. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 
 
 <p allign = "center">
      <img src="/LP_Chebyshev/photos/LP_4.png"width = "80%">
@@ -125,7 +125,7 @@ We observe that high frequencies above fs, ie above 10.32 kHz are "cut" in the o
 
  
 
-### Band Elimination Inverse Chebyshev
+## Band Elimination Inverse Chebyshev
 
 We would like to implement a Band Elimination Inverse Chebyshev filter with the below requirements of frequencies and attenuation levels:
 
@@ -148,7 +148,7 @@ In the below graph we can see the Transfer function of the filter. It satisfies 
      <img src="/BE_Inverse_Chebyshev/photos/BE_1.png"width = "80%">
 </p>
 
-Proceeding with the circuit, after using the script to calculate all the required components, below we can see the final schematic.
+Proceeding with the circuit, after using the script to calculate all the required **components**, below we can see the final **schematic**.
 
 <p allign = "center">
      <img src="/BE_Inverse_Chebyshev/photos/BE_1.png"width = "80%">
@@ -160,13 +160,13 @@ Connecting a Bode-Plotter, we take exactly the same above Transfer function grap
      <img src="/BE_Inverse_Chebyshev/photos/BE_6.png"width = "95%">
 </p>
 
-We are going to test the filter, giving as an input a sum of different cosines using different AC voltage sources in series and an Oscilloscope. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 
+We are going to **test** the filter, giving as an input a **sum of different cosines** using different AC voltage sources in series and an Oscilloscope. The output of the Transient Analysis with the Input (green) and Output (red) signals can be seen below. 
 
 <p allign = "center">
      <img src="/BE_Inverse_Chebyshev/photos/BE_3.png"width = "80%">
 </p>
 
-Proceeding with the Fourier Analysis, below we can see the spectrum of the input signal:
+Proceeding with the **Fourier Analysis**, below we can see the spectrum of the input signal:
 
 <p allign = "center">
      <img src="/BE_Inverse_Chebyshev/photos/BE_4.png"width = "80%">
@@ -184,13 +184,13 @@ At the input of the filter there are five spikes while at the output of one of t
 
 
 
-### Band-Pass Chebyshev 
+## Band-Pass Chebyshev 
 
-We would like to implement a Band Elimination Inverse Chebyshev filter with the below requirements of frequencies and attenuation levels:
+We would like to implement a Band-Pass Chebyshev filter with the below requirements of frequencies and attenuation levels:
 
 - f0 = 900 Hz
 - f1 = 850 Hz
--  f2 = 952.941 Hz
+- f2 = 952.941 Hz
 - f3 = 793.8602 Hz
 - f4 = 1.0203 kHz 
 - αmin= 29.0556 dB
@@ -205,10 +205,10 @@ In the below graph we can see the Transfer function of the filter. It satisfies 
      <img src="/BP_Chebyshev/photos/BP_1.png"width = "80%">
 </p>
 
-Proceeding with the circuit, after using the script to calculate all the required components, below we can see the final schematic.
+Proceeding with the circuit, after using the script to calculate all the required components, below we can see the final **schematic**.
 
 <p allign = "center">
-     <img src="/BP_Chebyshev/photos/BP_2.png"width = "80%">
+     <img src="/BP_Chebyshev/photos/BP_2.png"width = "95%">
 </p>
 
 Connecting a Bode-Plotter, we take exactly the same above Transfer function graph in Multisim. We are confident that the filter works properly.
@@ -235,5 +235,5 @@ Spectrum of the output signal:
      <img src="/BP_Chebyshev/photos/BP_6.png"width = "80%">
 </p>
 
-Initially, we noticet frequencies 𝑓2 = 1483.33 𝐻𝑧, 𝑓3 = 317.54 𝐻𝑧, 𝑓4 = 2.55 𝑘𝐻𝑧, 𝑓5 = 3.06 𝑘𝐻𝑧, which are in the cut-off zone are "cut", ie they are eliminated in the output . At the output we have only one spike at the frequency of 𝑓1 = 875 𝐻𝑧 which is actually between 850 and 952.94 Hz, which it absolutely logical since our circuit is a bandpass filter. Also, the correctness of the gain regulation is also observed. The magnitude of the spikes remaining at the output is approximately equal to its amplitude at the input, since we have a gain of 0dB. This concludes that the filter works correctly, as all requirements are met.
+Initially, we noticet frequencies 𝑓2 = 1483.33 𝐻𝑧, 𝑓3 = 317.54 𝐻𝑧, 𝑓4 = 2.55 𝑘𝐻𝑧, 𝑓5 = 3.06 𝑘𝐻𝑧, which are in the cut-off zone are "cut", ie they are eliminated in the output. At the output we have only one spike at the frequency of 𝑓1 = 875 𝐻𝑧 which is actually between 850 and 952.94 Hz, which was expected since our circuit is a bandpass filter. Also, the correctness of the gain regulation is also observed. The magnitude of the spikes remaining at the output is approximately equal to its amplitude at the input, since we have a gain of 0dB. This concludes that the filter works correctly, as all requirements are met.
 
